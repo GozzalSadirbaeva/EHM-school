@@ -1,12 +1,14 @@
+import { memo } from "react";
+
 const Program = () => {
   return (
     <div>
-      <section className="container px-4 md:px-8 grid md:grid-cols-2 md:pt-24 pt-12 md:gap-5 md:pb-[137px]">
-        <div>
-          <h2 className="text-[26px] md:text-[45px] font-extrabold md:leading-[60px]">
+      <section className="container px-4 md:px-8 grid md:grid-cols-2 md:pt-24 pt-12 md:gap-10 md:pb-[137px]">
+        <div className="self-center">
+          <h2 className="text-[26px] md:text-[45px] font-extrabold md:leading-[60px] md:text-left text-center">
             Bizning ta’lim dasturimiz – har tomonlama rivojlanish sari qadam!
           </h2>
-          <h3 className="text-[16px] md:text-[20px] font-medium leading-6 md:leading-[32px] pt-8 pb-20">
+          <h3 className="text-[16px] md:text-[20px] font-medium leading-6 md:leading-[32px] pt-8 pb-20 md:text-left text-center">
             Bizning maktabimizning ta’lim dasturi har bir o‘quvchining
             intellektual, ijodiy va jismoniy rivojlanishini qo‘llab-quvvatlash
             uchun maxsus ishlab chiqilgan. Dasturimiz bolalarni zamonaviy dunyo
@@ -15,7 +17,7 @@ const Program = () => {
         </div>
 
         <div className="flex justify-center">
-          <img src="/img2.png" alt="" className="  max-w-sm " />
+          <img src="/img2.png" alt="" />
         </div>
       </section>
 
@@ -25,7 +27,11 @@ const Program = () => {
             <h2 className="font-bold text-2xl md:text-[40px] leading-8 md:leading-[48px] text-white">
               Bizning Ta'lim Dasturimiz
             </h2>
-            <img src="/Illustration.svg" alt="" className="absolute md:right-28 right-10 top-[-80px] md:top-[-50px]  w-[20%]" />
+            <img
+              src="/Illustration.svg"
+              alt=""
+              className="absolute md:right-28 right-10 top-[-80px] md:top-[-50px]  w-[20%]"
+            />
             <div>
               <p className="font-medium text-base md:text-xl leading-6 md:leading-8 pt-4 md:pt-[89px] pb-6 md:pb-8 text-white md:pr-[50%]">
                 1. Til Darslari (Rus va Nemis) O'quvchilarimizga yuqori sifatli
@@ -76,7 +82,7 @@ const Program = () => {
           </div>
         </div>
       </section>
-      <section className="container py-[85px] md:px-[250px]">
+      <section className="container py-[85px] md:px-[250px] px-[20px]">
         <h2 className="font-bold text-2xl md:text-[40px] leading-8 md:leading-[48px] text-center">
           Dasturimizning asosiy maqsadi
         </h2>
@@ -91,4 +97,4 @@ const Program = () => {
   );
 };
 
-export default Program;
+export default memo(Program);

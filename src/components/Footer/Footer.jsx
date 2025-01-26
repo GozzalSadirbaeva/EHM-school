@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -8,13 +9,16 @@ const Footer = () => {
           {/* Logo and Description */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="w-10 h-10 bg-yellow-400 rounded-full flex items-center justify-center">
+              <div className="flex gap-5 items-center">
                 <img src="/logo1.svg" alt="" />
+                <p className="font-bold text-[28px] leading-6 text-white">
+                  EHM Gymnasium
+                </p>
               </div>
             </div>
             <p className="font-medium text-sm leading-6">
-              Har bir bolaning ichida katta imkoniyatlar bor – biz ularni <br />{" "}
-              kashf etish va rivojlantirish uchun yordam beramiz!
+              Har bir bolaning ichida katta imkoniyatlar bor – biz ularni kashf
+              etish va rivojlantirish uchun yordam beramiz!
             </p>
           </div>
           <div className="grid md:grid-cols-2 grid-cols-2  gap-[40px] pt-9 ">
@@ -49,8 +53,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href="#" className="flex items-center hover:underline">
-                    <img src="/twitter.svg" alt="" className="pr-[10px]" />{" "}
-                    Twitter
+                    <img src="/tg.svg" alt="" className="pr-[10px] w-[40px] h-[30px]" /> Telegram
                   </a>
                 </li>
               </ul>
@@ -71,4 +74,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default memo(Footer);

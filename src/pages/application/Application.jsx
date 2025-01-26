@@ -1,3 +1,5 @@
+import { memo } from "react";
+
 const Application = () => {
   return (
     <div>
@@ -46,4 +48,4 @@ const Application = () => {
   );
 };
 
-export default Application;
+export default memo (Application);

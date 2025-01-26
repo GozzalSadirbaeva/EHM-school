@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { memo, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
@@ -10,11 +10,13 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className="bg-[#315033] p-4 rounded-b-[30px]">
+      <nav className="bg-[#315033] p-4 md:rounded-b-[30px]">
         <div className="container mx-auto flex justify-between items-center">
           <div className="flex gap-5 items-center">
             <img src="/logo1.svg" alt="" />
-            <p className="font-bold text-[28px] leading-6 text-white">EHM Gymnasium</p>
+            <p className="font-bold text-[28px] leading-6 text-white">
+              EHM Gymnasium
+            </p>
           </div>
           <div>
             <button
@@ -84,4 +86,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default memo (Navbar);

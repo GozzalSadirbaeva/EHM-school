@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { memo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", age: "" });
@@ -45,7 +46,7 @@ const Home = () => {
         "Maktabga kirish uchun dastlab sinov imtihonlari o‘tkaziladi, bu o‘quvchilarning bilim darajasini aniqlashga yordam beradi. Sinovlar haqida batafsil ma’lumotni bizning saytimizdan olishingiz mumkin.",
     },
   ];
-
+  const navigate = useNavigate();
   return (
     <div>
       {/* Hero Section */}
@@ -64,10 +65,16 @@ const Home = () => {
               kelajakka qadam qo‘yaylik.
             </p>
             <div className="flex flex-col md:flex-row gap-3 pt-6">
-              <button className="bg-[#E0AF00] text-black py-3 px-6 rounded-lg text-base font-bold">
+              <button
+                className="bg-[#E0AF00] text-black py-3 px-6 rounded-lg text-base font-bold"
+                onClick={() => navigate("/application")}
+              >
                 Ariza yuborish
               </button>
-              <button className="bg-[#F0F0F2DE] py-3 px-6 rounded-lg text-base font-bold">
+              <button
+                className="bg-[#F0F0F2DE] py-3 px-6 rounded-lg text-base font-bold"
+                onClick={() => navigate("/about")}
+              >
                 📚 Maktab haqida
               </button>
             </div>
@@ -184,7 +191,10 @@ const Home = () => {
                   O‘qishdagi yuqori natijalar
                 </p>
               </div>
-              <button className="px-6 md:px-12 py-2 md:py-3 rounded-lg bg-[#315033] text-white mt-8 md:mt-10 font-bold text-sm md:text-base leading-6">
+              <button
+                className="px-6 md:px-12 py-2 md:py-3 rounded-lg bg-[#315033] text-white mt-8 md:mt-10 font-bold text-sm md:text-base leading-6"
+                onClick={() => navigate("/about")}
+              >
                 📚 Ko’proq
               </button>
             </div>
@@ -210,7 +220,10 @@ const Home = () => {
               shuningdek, bolalarga bilim olish jarayonida ko‘proq mustaqil
               fikrlash va ijodiy yondashuvni o‘rgatish maqsad qilinadi.
             </h3>
-            <button className="px-6 md:px-12 py-2 md:py-3 rounded-lg bg-white mt-4 md:mt-6 font-bold text-sm md:text-base leading-6">
+            <button
+              className="px-6 md:px-12 py-2 md:py-3 rounded-lg bg-white mt-4 md:mt-6 font-bold text-sm md:text-base leading-6"
+              onClick={() => navigate("/program")}
+            >
               🎓 Ko’proq
             </button>
           </div>
@@ -269,7 +282,10 @@ const Home = () => {
             yarating!
           </h3>
           <div className="flex justify-center mt-8 md:mt-11">
-            <button className="px-5 py-3 bg-[#315033] rounded-lg text-white font-bold text-sm md:text-base leading-6">
+            <button
+              className="px-5 py-3 bg-[#315033] rounded-lg text-white font-bold text-sm md:text-base leading-6"
+              onClick={() => navigate("/application")}
+            >
               Royhatdan otish
             </button>
           </div>
@@ -389,7 +405,7 @@ const Home = () => {
             <h3 className="font-medium md:text-lg text-sm md:leading-7 pb-10 pt-6 text-center">
               Ariza qoldiring. Biz siz bilan bog‘lanib batafsil malumot beramiz.
             </h3>
-            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm sm:flex sm:self-center">
+            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm sm:flex sm:self-center" onClick={() => navigate("/application")}>
               Ariza yuborish
             </button>
           </div>
@@ -451,4 +467,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo (Home);

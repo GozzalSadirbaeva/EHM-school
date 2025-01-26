@@ -1,5 +1,6 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { memo } from "react";
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 
 const Contact = () => {
@@ -107,4 +108,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default memo(Contact);
