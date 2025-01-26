@@ -8,6 +8,10 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
   return (
     <div>
       <nav className="bg-[#315033] p-4 md:rounded-b-[30px]">
@@ -49,28 +53,40 @@ const Navbar = () => {
             </button>
             <div
               className={`
-    md:flex md:space-x-10 md:static md:opacity-100 md:visible
-    ${
-      isOpen
-        ? "absolute top-20 left-0 w-full bg-[#315033] rounded-b-xl p-5 opacity-100 visible"
-        : "hidden opacity-0 invisible"
-    }
-  `}
+          md:flex md:space-x-10 md:static md:opacity-100 md:visible
+          ${
+            isOpen
+              ? "absolute top-20 left-0 w-full bg-[#315033] rounded-b-xl p-5 opacity-100 visible"
+              : "hidden opacity-0 invisible"
+          }
+        `}
             >
               <div className="flex flex-col items-start space-y-4 md:flex-row md:space-y-0 md:items-center md:space-x-10">
-                <NavLink to={"/"} className="nav-text">
+                <NavLink to={"/"} className="nav-text" onClick={closeMenu}>
                   Bosh sahifa
                 </NavLink>
-                <NavLink to={"/about"} className="nav-text">
+                <NavLink to={"/about"} className="nav-text" onClick={closeMenu}>
                   Biz haqimizda
                 </NavLink>
-                <NavLink to={"/program"} className="nav-text">
+                <NavLink
+                  to={"/program"}
+                  className="nav-text"
+                  onClick={closeMenu}
+                >
                   Ta`lim dasturi
                 </NavLink>
-                <NavLink to={"/application"} className="nav-text">
+                <NavLink
+                  to={"/application"}
+                  className="nav-text"
+                  onClick={closeMenu}
+                >
                   Ariza yuborish
                 </NavLink>
-                <NavLink to={"/contact"} className="nav-text">
+                <NavLink
+                  to={"/contact"}
+                  className="nav-text"
+                  onClick={closeMenu}
+                >
                   Bog’lanish
                 </NavLink>
                 <div className="flex items-center gap-4">
@@ -86,4 +102,4 @@ const Navbar = () => {
   );
 };
 
-export default memo (Navbar);
+export default memo(Navbar);
