@@ -2,7 +2,7 @@ const Footer = () => {
   return (
     <div className=" bg-[#315033] rounded-t-[30px]">
       <footer className="container text-white py-10">
-        <div className=" px-6 grid grid-cols-1 md:grid-cols-2 md:gap-[258px]">
+        <div className=" px-6 grid grid-cols-1 md:grid-cols-2 md:gap-[200px]">
           {/* Logo and Description */}
           <div>
             <div className="flex items-center mb-4">
@@ -16,7 +16,7 @@ const Footer = () => {
               captivating young minds with interactive fun.
             </p>
           </div>
-          <div className="grid md:grid-cols-3 grid-cols-2 md:gap-[80px] gap-[40px] pt-9 ">
+          <div className="grid md:grid-cols-3 grid-cols-2  gap-[40px] pt-9 ">
             {/* Quick Links */}
             <div>
               <h3 className="font-bold text-[18px] mb-6 leading-6">

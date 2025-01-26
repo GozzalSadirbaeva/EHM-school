@@ -34,7 +34,7 @@ const Home = () => {
     <div>
       {/* Hero Section */}
       <section id="hero" className="container mx-auto px-4 md:px-8 pb-16">
-        <img src="/Lines.svg" alt="" className="md:pl-7" />
+        <img src="/Lines.svg" alt="" className="md:pl-7 w-[50%]" />
         <div className="flex flex-col md:flex-row gap-6 items-center">
           <div className="flex-1">
             <h1 className="text-[32px] md:text-[60px] font-bold leading-tight pb-6">
@@ -302,55 +302,60 @@ const Home = () => {
             </div>
             <div className="p-6 md:p-[30px] bg-white rounded-xl shadow-md">
               <img src="/Vector1.svg" alt="" className="w-8 md:w-auto" />
-              <p className="font-medium text-sm md:text-lg leading-6 md:leading-7 pt-4 md:pt-6 pb-4 md:pb-5">
-                Maktabni tanlash biz uchun juda muhim qaror edi, va biz to‘g‘ri
-                tanlov qilganimizga ishonchimiz komil. Ushbu maktab nafaqat
-                bilim beradi, balki bolalarning iste’dodlarini ochishga ham
-                yordam beradi. Biz farzandimizning kelajagi uchun xotirjammiz.
-              </p>
-              <div className="flex justify-between items-center">
-                <p className="font-bold text-sm md:text-lg leading-5 md:leading-6">
-                  Rustam A., 10 yoshli <br />
-                  o‘quvchining otasi
+              <div className="flex flex-col md:gap-[30px] sm:gap-0">
+                <p className="font-medium text-sm md:text-lg leading-6 md:leading-7 pt-4 md:pt-6 pb-4 md:pb-5">
+                  Maktabni tanlash biz uchun juda muhim qaror edi, va biz
+                  to‘g‘ri tanlov qilganimizga ishonchimiz komil. Ushbu maktab
+                  nafaqat bilim beradi, balki bolalarning iste’dodlarini
+                  ochishga ham yordam beradi. Biz farzandimizning kelajagi uchun
+                  xotirjammiz.
                 </p>
-                <div className="flex">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, starIdx) => (
-                      <img
-                        key={starIdx}
-                        src="/star1.svg"
-                        alt=""
-                        className="w-4 md:w-auto"
-                      />
-                    ))}
+                <div className="flex justify-between items-center">
+                  <p className="font-bold text-sm md:text-lg leading-5 md:leading-6">
+                    Rustam A., 10 yoshli <br />
+                    o‘quvchining otasi
+                  </p>
+                  <div className="flex">
+                    {Array(5)
+                      .fill(0)
+                      .map((_, starIdx) => (
+                        <img
+                          key={starIdx}
+                          src="/star1.svg"
+                          alt=""
+                          className="w-4 md:w-auto"
+                        />
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
             <div className="p-6 md:p-[30px] bg-white rounded-xl shadow-md">
               <img src="/Vector1.svg" alt="" className="w-8 md:w-auto" />
-              <p className="font-medium text-sm md:text-lg leading-6 md:leading-7 pt-4 md:pt-6 pb-4 md:pb-5">
-                Ushbu maktab bizni zamonaviy yondashuvi va qulay o‘quv muhiti
-                bilan o‘ziga jalb qildi. Farzandim har kuni maktabga borishni
-                intiqlik bilan kutadi. U yerda nafaqat bilim, balki yaxshi
-                tarbiya ham oladi. O‘qituvchilariga katta rahmat!
-              </p>
-              <div className="flex justify-between items-center">
-                <p className="font-bold text-sm md:text-lg leading-5 md:leading-6">
-                  Dilnoza K., 7 yoshli <br />
-                  o‘quvchining onasi
+              <div className="flex flex-col md:gap-[55px] sm:gap-0">
+                <p className="font-medium text-sm md:text-lg leading-6 md:leading-7 pt-4 md:pt-6 pb-4 md:pb-5">
+                  Ushbu maktab bizni zamonaviy yondashuvi va qulay o‘quv muhiti
+                  bilan o‘ziga jalb qildi. Farzandim har kuni maktabga borishni
+                  intiqlik bilan kutadi. U yerda nafaqat bilim, balki yaxshi
+                  tarbiya ham oladi. O‘qituvchilariga katta rahmat!
                 </p>
-                <div className="flex">
-                  {Array(5)
-                    .fill(0)
-                    .map((_, starIdx) => (
-                      <img
-                        key={starIdx}
-                        src="/star1.svg"
-                        alt=""
-                        className="w-4 md:w-auto"
-                      />
-                    ))}
+                <div className="flex justify-between items-center">
+                  <p className="font-bold text-sm md:text-lg leading-5 md:leading-6">
+                    Dilnoza K., 7 yoshli <br />
+                    o‘quvchining onasi
+                  </p>
+                  <div className="flex">
+                    {Array(5)
+                      .fill(0)
+                      .map((_, starIdx) => (
+                        <img
+                          key={starIdx}
+                          src="/star1.svg"
+                          alt=""
+                          className="w-4 md:w-auto"
+                        />
+                      ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -406,9 +411,17 @@ const Home = () => {
                 </span>
                 <span className="text-xl">
                   {activeIndex === index ? (
-                    <img src="/minus.svg" alt="collapse" />
+                    <img
+                      src="/minus.svg"
+                      alt="collapse"
+                      className=" max-w-[70%] md:max-w-full"
+                    />
                   ) : (
-                    <img src="/plus.svg" alt="expand" />
+                    <img
+                      src="/plus.svg"
+                      alt="expand"
+                      className="max-w-[70%] md:max-w-full"
+                    />
                   )}
                 </span>
               </button>
