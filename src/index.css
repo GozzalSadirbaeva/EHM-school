@@ -36,3 +36,19 @@ body {
   background-image: url(/public/bg-fon2.svg);
   background-color: #2c3e2d;
 }
+.bg-fon-dastur {
+  background-image: url(/public/bg-dastur.svg);
+  background-color: #2c3e2d;
+}
+.tel{
+  background: linear-gradient(180deg, #5CF777 0%, #0EBC29 100%);
+
+}
+.insta{
+  background: linear-gradient(180deg, #FCA759 -3.12%, #E82D56 17.47%, #A22DB4 77.07%, #643DCE 105.24%);
+
+}
+.telegram{
+  background: linear-gradient(137.24deg, #0088CC 8.1%, #0083C5 94.96%);
+
+}

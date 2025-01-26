@@ -12,9 +12,9 @@ const Navbar = () => {
     <div>
       <nav className="bg-[#315033] p-4 rounded-b-[30px]">
         <div className="container mx-auto flex justify-between items-center">
-          <div className="flex gap-5">
+          <div className="flex gap-5 items-center">
             <img src="/logo1.svg" alt="" />
-            <img src="/EHM.svg" alt="" />
+            <p className="font-bold text-[28px] leading-6 text-white">EHM Gymnasium</p>
           </div>
           <div>
             <button
@@ -64,6 +64,9 @@ const Navbar = () => {
                 </NavLink>
                 <NavLink to={"/program"} className="nav-text">
                   Ta`lim dasturi
+                </NavLink>
+                <NavLink to={"/application"} className="nav-text">
+                  Ariza yuborish
                 </NavLink>
                 <NavLink to={"/contact"} className="nav-text">
                   Bog’lanish

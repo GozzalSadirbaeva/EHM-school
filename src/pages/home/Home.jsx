@@ -24,10 +24,26 @@ const Home = () => {
       answer:
         "Bizning maktabda o‘quvchilar til va akademik fanlar bo‘yicha keng qamrovli ta’lim olishadi. Dasturimizda rus va nemis tillari, matematika, adabiyot, san’at, jismoniy tarbiya va boshqa fanlar mavjud.",
     },
-    { question: "Qanday qilib ariza yuborish mumkin?", answer: "" },
-    { question: "Maktabda o‘qish narxi qancha?", answer: "" },
-    { question: "Maktabda qanday o‘qituvchilar ishlaydi?", answer: "" },
-    { question: "Maktabga qanday kirish sinovlari bor?", answer: "" },
+    {
+      question: "Qanday qilib ariza yuborish mumkin?",
+      answer:
+        "Ariza yuborish uchun saytimizdagi ariza formasi orqali ma'lumotlaringizni kiritishingiz kerak. Keyin biz siz bilan bog‘lanamiz va qo‘shimcha ma’lumotlarni taqdim etamiz.",
+    },
+    {
+      question: "Maktabda o‘qish narxi qancha?",
+      answer:
+        " O‘qish narxi haqida to‘liq ma’lumotni bizning adminstratsiya bo‘limidan olishingiz mumkin. Har bir yil uchun turli to‘lov variantlari mavjud.",
+    },
+    {
+      question: "Maktabda qanday o‘qituvchilar ishlaydi?",
+      answer:
+        "Bizning o‘qituvchilarimiz yuqori malakali va o‘z sohalarida tajribaga ega. Har bir o‘qituvchi o‘z sohasida mutaxassis va bolalar bilan ishlashda katta tajribaga ega.",
+    },
+    {
+      question: "Maktabga qanday kirish sinovlari bor?",
+      answer:
+        "Maktabga kirish uchun dastlab sinov imtihonlari o‘tkaziladi, bu o‘quvchilarning bilim darajasini aniqlashga yordam beradi. Sinovlar haqida batafsil ma’lumotni bizning saytimizdan olishingiz mumkin.",
+    },
   ];
 
   return (
@@ -179,10 +195,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section
-        id="program"
-        className="bg-fon-second md:mt-[109px] mt-[50px]  py-10 px-4 md:px-8"
-      >
+      <section className="bg-fon-second md:mt-[109px] mt-[50px]  py-10 px-4 md:px-8">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h2 className="font-bold text-2xl md:text-[40px] leading-8 md:leading-[48px] text-white">
@@ -376,7 +389,7 @@ const Home = () => {
             <h3 className="font-medium md:text-lg text-sm md:leading-7 pb-10 pt-6 text-center">
               Ariza qoldiring. Biz siz bilan bog‘lanib batafsil malumot beramiz.
             </h3>
-            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm ">
+            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm sm:flex sm:self-center">
               Ariza yuborish
             </button>
           </div>
@@ -414,13 +427,13 @@ const Home = () => {
                     <img
                       src="/minus.svg"
                       alt="collapse"
-                      className=" max-w-[70%] md:max-w-full"
+                      className=" max-w-[70%] md:max-w-[90%]"
                     />
                   ) : (
                     <img
                       src="/plus.svg"
                       alt="expand"
-                      className="max-w-[70%] md:max-w-full"
+                      className="max-w-[70%] md:max-w-[90%]"
                     />
                   )}
                 </span>
