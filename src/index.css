@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  /* scroll-behavior: smooth; */
+}
+body {
+  font-family: "Quicksand", serif;
+}
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto;
+}
+.nav-text {
+  font-family: "Quicksand", serif;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+}
+.nav-text:hover {
+  color: #ffc909;
+}
+.bg-fon {
+  background-image: url(/public/bg.png);
+}
+.bg-fon-second {
+  background-image: url(/public/bg-fon2.svg);
+  background-color: #2c3e2d;
+}
