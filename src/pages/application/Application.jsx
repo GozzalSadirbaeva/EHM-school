@@ -1,6 +1,9 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 const Application = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <section className="container px-4 md:px-8 md:py-[170px] py-[100px]">

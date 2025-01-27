@@ -1,7 +1,10 @@
-import { memo, useState } from "react";
+import { memo, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [formData, setFormData] = useState({ name: "", phone: "", age: "" });
 
   const handleChange = (e) => {
@@ -397,7 +400,7 @@ const Home = () => {
           <div>
             <img src="/img4.png" alt="" />
           </div>
-          <div>
+          <div className="items-center flex flex-col md:items-start">
             <h2 className="font-bold md:text-[40px] text-[20px] md:leading-[48px] pt-10 text-center md:text-left">
               Farzandingizni eng yaxshi ta’lim bilan ta’minlash uchun ariza
               yuboring!
@@ -405,7 +408,7 @@ const Home = () => {
             <h3 className="font-medium md:text-lg text-sm md:leading-7 pb-10 pt-6 text-center">
               Ariza qoldiring. Biz siz bilan bog‘lanib batafsil malumot beramiz.
             </h3>
-            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm sm:flex sm:self-center" onClick={() => navigate("/application")}>
+            <button className="bg-[#E0AF00] px-4 py-2 text-black md:py-[11.5px] md:px-5 rounded-lg md:text-base font-bold leading-6 text-sm " onClick={() => navigate("/application")}>
               Ariza yuborish
             </button>
           </div>

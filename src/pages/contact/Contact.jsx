@@ -1,9 +1,12 @@
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import { MapContainer, Marker, TileLayer, Tooltip } from "react-leaflet";
 
 const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const locations = [
     { position: [41.2995, 69.2401], price: "150K" }, // Tashkent markazi
     { position: [41.3155, 69.2551], price: "200K" },
@@ -13,7 +16,7 @@ const Contact = () => {
   return (
     <div className="container px-4 md:px-8 py-[91px]">
       <h2 className="font-semibold text-[36px] leading-7">Bog’lanish</h2>
-      <p className="font-light text-[16px] leading-6 pt-7">
+      <p className="font-light text-[22px] leading-6 pt-7">
         Bizning ijtimoy sahiflarimiz
       </p>
       <div className="grid md:grid-cols-2 md:gap-[72px]">

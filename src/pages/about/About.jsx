@@ -1,6 +1,9 @@
-import { memo } from "react";
+import { memo, useEffect } from "react";
 
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       {/* Maktab haqida bo'limi */}
